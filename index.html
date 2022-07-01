@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+   <body style="background-color:rgb(228, 192, 201)">
+    <center><h1>LE PIRATAGE </h1></center>
+        <h3>Publié le 25/05/2022, par le journaliste hight-tech Edward Back
+            Microsoft a publié un rapport avertissant de nouvelles techniques utilisées par 
+            les pirates pour cacher leurs scripts sur les sites compromis. 
+            Ils utilisent notamment l'encodage en base 64 pour masquer le chargement 
+            de fichiers externes et donner à leur code un air inoffensif.
+
+
+
+
+        </h3> <center> <h2>QU'EST-CE QU'UNE CYBERATTAQUE ? </h2></center>
+       <h3> Au départ, les pirates visaient des failles dans les plateformes comme Magent, PrestaShop ou WordPress, 
+        et se contentaient d’injecter du JavaScript. L'une des attaques les plus connues de ce genre est Magecart, détectée pour la première fois en 2010 et qui a fait grand bruit lors d'une nouvelle vague d'attaques en 2019. Si les nouvelles techniques nécessitent toujours une faille pour injecter des données sur le serveur, 
+        le code JavaScript n'est plus laissé en évidence.<br><br>
+          Avec le développement d'Internet et du cloud, les cyberattaques sont de plus en plus fréquentes et
+         perfectionnées. Qui est derrière ces attaques et dans quel but ? Quelles sont les méthodes des hackers et quelles sont les cyberattaques les plus massives ? 
+L'injection de code pour voler des coordonnées bancaires sur les sites marchands, ou skimming en anglais, 
+n'a rien de nouveau. Toutefois, comme avec toutes les menaces sur le Web, les auteurs améliorent constamment 
+leurs outils pour garder une longueur d'avance sur les spécialistes de la cybersécurité. Selon un nouveau rapport de Microsoft, les pirates ont développé de nouvelles techniques pour masquer leur code et éviter ainsi d'être repérés.
+        Cette nouvelle version majeure de PHP introduit plus de 20 nouvelles fonctionnalités. 
+            Gardez à l’esprit qu’il peut y avoir des changements après la date de sortie qui peuvent 
+            allonger ou raccourcir cette liste</h3><br><br>
+            
+
+            <center><h2>VOICI QUELQUES EXEMPLES DE CODE MALVEILLANT DANS UNE IMAGE</h2></center> <br><br>
+            <h3>La première technique consiste à faire passer le code pour autre chose. 
+            Microsoft a notamment détecté du JavaScript, encodé en base 64 dans du code PHP, 
+            lui-même intégré dans une image. Dans un cas les auteurs ont utilisé le favicon 
+            (l'icône du site affiché dans la barre d'adresses ou sur les favoris), 
+            dans un autre cas ils ont utilisé une simple image. Il leur aurait suffi 
+            d'ajouter la fonction PHP include() dans la page d'index du site, un ajout qui passerait inaperçu.<br><br>
+
+            Dans les deux cas, le script PHP vérifie l'adresse de la page à la recherche des termes 
+            « checkout » et « onepage », qui correspondent à la page de paiement de la plateforme Magento. 
+            Il vérifie également les cookies pour s'assurer que l'internaute n'est pas un administrateur. 
+            Une fois fait, il décode le script JavaScript qui va afficher un faux formulaire de paiement puis 
+            envoyer les données vers un serveur externe.<br><br>
+            
+            La seconde technique ajoute quatre lignes de JavaScript dans la page. De la même manière, 
+            le script ne se lance que sur une page dont l'adresse contient le terme « checkout », le mot-clé étant encodé en base 64 dans le script pour passer inaperçu. Il télécharge ensuite un autre script hébergé sur un serveur externe, dont l'adresse est encodée en base 64 et divisée en plusieurs groupes de caractères concaténés. Ce script s'assure que les outils développeurs du navigateur ne sont pas ouverts, et enregistre les données du formulaire de paiement dans une image,
+             qui est envoyée vers une adresse externe.
+             Enfin, pour la troisième technique, les pirates font passer leur script pour un script officiel d'analyse d'audience Google Analytics ou Meta Pixel. Là encore, les auteurs ont ajouté un script simple qui télécharge un second script depuis un serveur externe, et utilisé l'encodage en base 64 pour masquer l'adresse.  
+             <br><br>
+Le point commun entre toutes ces techniques est l'utilisation de chaînes de caractères en base 64, 
+et notamment de la fonction JavaScript atob() pour les décoder. Ceci peut permettre aux développeurs 
+de repérer les sites infectés. Il est en revanche difficile pour les internautes de se défendre contre 
+ce type d'attaque, à part en utilisant des méthodes comme les cartes bancaires virtuelles à usage unique. 
+Du côté des administrateurs de site, Microsoft conseille de vérifier que leur système de gestion de contenu 
+(CMS) et toutes les extensions sont à jour.</h3>
+
+
+ 
+</body>
+</html>
